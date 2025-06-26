@@ -39,7 +39,7 @@ def generate_msg(data: LeadInput):
         messages=[{"role": "user", "content": prompt}]
     )
 
-    message = response.choices[0].message["content"]
+    message = response['choices'][0]['message']['content']
     return {"message": message}
 
 @app.post("/send-email")
